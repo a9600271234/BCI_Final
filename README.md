@@ -44,6 +44,30 @@ The brain component from the quantity column is an important index of how clean 
 
 IV. Usage
 ---
+### Enviromnet and Softwares used:
+- Matlab 2021a
+- EEGlab 
+- Python 3.8
+- PyTorch 1.7.1
+
+### Step
+
+
+1. Download the dataset from http://gigadb.org/dataset/100295. The format of this dataset is .mat documents. However, the later process of artifact removal requires the use of .set and .csv formats, so we need to process it later.
+
+2. Use the Step0_extract_EEG.m file in the code folder to extract the EEG part of the data.
+
+3. Use the Step1_to_30ch.m file in the code folder to extract the 30 channels we need for later processing from the dataset generated in step 2.
+
+4. Use the Step2_ICA.m file in the code folder to generate the data after applying ICA with raw data, ICA with filtered data, ICA with filtering and ASR individually. You can choose the desired method in the code.
+
+5. Use the Step3_ICA.m file in the code folder to calculate the mean and average quantity of each component after different methods of artifact removal.
+
+6. The UNet++ and ICUNet models and their usage can be found at https://github.com/roseDwayane/AIEEG. The data format required by the AI model is .csv, and you can use the Step4_extract_csv.m file in the code folder to extract the EEG signal.
+
+7. Finally, use the Step5_csv_to_set.m file in the code folder to transform the data after the AI model from .csv to .set format. Then, follow step 5 to calculate the result.
+
+
 V. Results
 ---
 The components detected in motor imagery EEG datasets can be divided into brain, eye muscle, heart, channel noise, line noise and others. The means of  heart, channel noise and line noise didn’t show statistically significant no matter the usage of artifact removal methods. Wile the means of components of eyes and muscle have edged up, with the mean of raw data 0, treated with Filer, ASR, UNet++,  ICUnet and labeled with ICA, but it is still relatively small. Brain and others are the relatively large portion of the components to be classified in this data.  

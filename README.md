@@ -101,20 +101,21 @@ Fig.10 & 11. The 2D and 3D plot of data processed by ICUnet from the fifth subje
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/1.png) 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/2.png) 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/3.png) 
+
 VI. References
 ---
 [1] Gonçales, L., Farias, K., Kupssinskü, L., & Segalotto, M. (2021). The effects of applying filters on EEG signals for classifying developers’ code comprehension. Journal of Applied Research and Technology, 19(6), 584-602.
 
-[2] Patrick Bloniasz. (2022). Artifact Subspace Reconstruction (ASR) for electroencephalography artifact removal must be optimized for each unique dataset. Qeios. doi:10.32388/SMEI50.
+[2] Patrick Bloniasz. (2022). Artifact Subspace Reconstruction (ASR) for electroencephalography artifact removal must be optimized for each unique dataset. Qeios. doi:10.32388/SMEI50. 
 
 [3] Chuang CH, Chang KY, Huang CS, Jung TP. IC-U-Net: A U-Net-based Denoising Autoencoder Using Mixtures of Independent Components for Automatic EEG Artifact Removal. Neuroimage. 2022 Nov;263:119586. doi: 10.1016/j.neuroimage.2022.119586. Epub 2022 Aug 27. PMID: 36031182.
 
 [4] Zhou, Z., Rahman Siddiquee, M. M., Tajbakhsh, N., & Liang, J
-(2018). Unet++: A nested -net architecture for medical image segmentation. In Deep Learning in Medical Image Analysis and Multimodal Learning for Clinical Decision Support: 4th International Workshop, DLMIA 2018, and 8th International Workshop, ML-CDS 2018, Held in Conjunction with MICCAI 2018, Granada, Spain, September 20, 2018, Proceedings 4 (pp. 3-11). Springer International Publishing    
+(2018). Unet++: A nested -net architecture for medical image segmentation. In Deep Learning in Medical Image Analysis and Multimodal Learning for Clinical Decision Support: 4th International Workshop, DLMIA 2018, and 8th International Workshop, ML-CDS 2018, Held in Conjunction with MICCAI 2018, Granada, Spain, September 20, 2018, Proceedings 4 (pp. 3-11). Springer International Publishing.    
 
 [5] http://gigadb.org/dataset/100295  
 
-[6] Luciw, M., Jarocka, E. & Edin, B. Multi-channel EEG recordings during 3,936 grasp and lift trials with varying weight and friction. Sci Data 1, 140047 (2014)    
+[6] Luciw, M., Jarocka, E. & Edin, B. Multi-channel EEG recordings during 3,936 grasp and lift trials with varying weight and friction. Sci Data 1, 140047 (2014).    
 
 
 ## 

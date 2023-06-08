@@ -107,10 +107,12 @@ VI. References
 
 [3] Chuang CH, Chang KY, Huang CS, Jung TP. IC-U-Net: A U-Net-based Denoising Autoencoder Using Mixtures of Independent Components for Automatic EEG Artifact Removal. Neuroimage. 2022 Nov;263:119586. doi: 10.1016/j.neuroimage.2022.119586. Epub 2022 Aug 27. PMID: 36031182.
 
-[4] Zhou, Z., Rahman Siddiquee, M. M., Tajbakhsh, N., & Liang, J.
-(2018). Unet++: A nested -net architecture for medical image segmentation. In Deep Learning in Medical Image Analysis and Multimodal Learning for Clinical Decision Support: 4th International Workshop, DLMIA 2018, and 8th International Workshop, ML-CDS 2018, Held in Conjunction with MICCAI 2018, Granada, Spain, September 20, 2018, Proceedings 4 (pp. 3-11). Springer International Publishing.
-[5] http://gigadb.org/dataset/100295
-[6] Luciw, M., Jarocka, E. & Edin, B. Multi-channel EEG recordings during 3,936 grasp and lift trials with varying weight and friction. Sci Data 1, 140047 (2014).
+[4] Zhou, Z., Rahman Siddiquee, M. M., Tajbakhsh, N., & Liang, J
+(2018). Unet++: A nested -net architecture for medical image segmentation. In Deep Learning in Medical Image Analysis and Multimodal Learning for Clinical Decision Support: 4th International Workshop, DLMIA 2018, and 8th International Workshop, ML-CDS 2018, Held in Conjunction with MICCAI 2018, Granada, Spain, September 20, 2018, Proceedings 4 (pp. 3-11). Springer International Publishing    
+
+[5] http://gigadb.org/dataset/100295  
+
+[6] Luciw, M., Jarocka, E. & Edin, B. Multi-channel EEG recordings during 3,936 grasp and lift trials with varying weight and friction. Sci Data 1, 140047 (2014)    
 
 
 ## 

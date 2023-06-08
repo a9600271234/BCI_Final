@@ -96,13 +96,13 @@ Fig.7 & 8. The 2D and 3D plot of data processed by ASR from the fifth subject.
 Fig.9 & 10. The 2D and 3D plot of data processed by UNet++ from the fifth subject. 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_ICUnet.png)  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_ICUnet.png)  
-Fig.10 & 11. The 2D and 3D plot of data processed by ICUnet from the fifth subject.  
+Fig.11 & 12. The 2D and 3D plot of data processed by ICUnet from the fifth subject.  
 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/1.png)  
-Fig. 12 The result of Raw data  
+Fig.13. The result of Raw data  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/2.png)  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/3.png)  
-Fig. 13 & 14 The result of differnet way of artifact removal   
+Fig.14 & 15. The result of differnet way of artifact removal   
 
 VI. References
 ---

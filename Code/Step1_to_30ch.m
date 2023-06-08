@@ -13,7 +13,6 @@ save_path = '/Volumes/GoogleDrive/共用雲端硬碟/CNElab_專題111_ArtifactRe
 % new location path
 ch_loc_path = '/Volumes/GoogleDrive/共用雲端硬碟/CNElab_專題111_ArtifactRemoval/5.Dataset/Motor-Imagery/1/loc64.ced';
 
-num_doc = 52;
 sr_rate = 512;
 num_doc = 52
 

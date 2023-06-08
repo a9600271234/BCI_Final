@@ -84,21 +84,23 @@ The value obtained from UNet++ shows a significant difference in contrast with o
 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_RAW.png)  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_RAW.png)  
-Fig.3 The 2D and 3D plot of raw data from the fifth subject.
+Fig.3 & 4. The 2D and 3D plot of raw data from the fifth subject.
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_Filter.png)  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_Filter.png)  
-Fig.4. The 2D and 3D plot of data processed by filter from the fifth subject.  
+Fig.5 & 6. The 2D and 3D plot of data processed by filter from the fifth subject.  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_ASR.png)
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_ASR.png)  
-Fig.5. The 2D and 3D plot of data processed by ASR from the fifth subject.  
+Fig.7 & 8. The 2D and 3D plot of data processed by ASR from the fifth subject.  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_UNet_PP.png)  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_UNet_PP.png)  
-Fig.6. The 2D and 3D plot of data processed by UNet++ from the fifth subject. 
+Fig.9 & 10. The 2D and 3D plot of data processed by UNet++ from the fifth subject. 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_ICUnet.png)  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_ICUnet.png)  
-Fig.7. The 2D and 3D plot of data processed by ICUnet from the fifth subject.  
+Fig.10 & 11. The 2D and 3D plot of data processed by ICUnet from the fifth subject.  
 
-
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/1.png) 
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/2.png) 
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/3.png) 
 VI. References
 ---
 [1] Gonçales, L., Farias, K., Kupssinskü, L., & Segalotto, M. (2021). The effects of applying filters on EEG signals for classifying developers’ code comprehension. Journal of Applied Research and Technology, 19(6), 584-602.

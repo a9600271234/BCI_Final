@@ -29,14 +29,7 @@ The data set we use in practice is the EEG datasets for motor imagery brain comp
 So there are only 47 data sets we use for analyzing. To reduce the redundant and same-source signal reception, we choose 30 (Fig.1) out of 64 channel (Four channels  from Electrode patch to detect the movement from muscles be excluded from the original 68 channels). The original sampling rate was 512, downsample to 256.  
 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/30_channel/ch.png)  
-Fig.1. The channel location of 30  channels.  
-
-The goal is to use these different algorithms to reject unwanted signals so we can identify when a hand is conducting specific movements using EEG data. The PSD values resulting from different algorithms will be calculated and compared. Also, through the ICA function in EEGLab, different sources (brain, eye, muscle, heart, Channel Noise, Line Noise, others) are separated from the EEG signals. The differences between the raw data and various processing methods are compared after using IClabel to observe whether the number of brain signals has increased. 
-
-The brain component from the quantity column is an important index of how clean the data is. It indicates on average how many channels out of 30 channels does the signal coming from the brain component. Therefore, the higher this value is, the better the signal is. Again, we are using this method to compare the result of different signals coming from different algorithms.
-
-Usage : Describe the usage of their BCI model's code. Explain the required environment and dependencies needed to run the code. Describe any configurable options or parameters within the code. Provide instructions on how to execute the code.
-
+Fig.1. The channel location of 30  channels.   
 
 III. Model Framework & Validation
 ---

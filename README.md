@@ -118,14 +118,3 @@ VI. References
 [5] http://gigadb.org/dataset/100295  
 
 [6] Luciw, M., Jarocka, E. & Edin, B. Multi-channel EEG recordings during 3,936 grasp and lift trials with varying weight and friction. Sci Data 1, 140047 (2014).    
-
-
-## 
-## 
-`
-test
-![image]()  
-`
-- 
-
-

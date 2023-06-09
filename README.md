@@ -34,6 +34,9 @@ Fig.1. The channel location of 30  channels.
 
 III. Model Framework & Validation
 ---
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/framework.png)  
+Fig.2. Models flow and framework 
+
 The objective of this study is to utilize different algorithms to eliminate unwanted signals in order to identify specific hand movements using EEG data. The Power Spectral Density (PSD) values obtained from these algorithms will be calculated and compared. Additionally, the ICA (Independent Component Analysis) function in EEGLAB will be employed to separate different sources (brain, eye, muscle, heart, channel noise, line noise, etc.) from the EEG signals. The differences between the raw data and various processing methods will be compared by using IClabel to observe whether the number of brain signals has increased.  
 
 The "brain component" value in the quantity column serves as a crucial indicator of data cleanliness. It represents the average number of channels out of the 30 selected channels that contain brain signals. Therefore, a higher value indicates a cleaner signal. This metric will be used to compare the results obtained from different algorithms and signal processing techniques.  
@@ -70,7 +73,7 @@ V. Results
 ### - ICLable
 The components detected in motor imagery EEG datasets can be divided into brain, eye muscle, heart, channel noise, line noise and others. The means of  heart, channel noise and line noise didn’t show statistically significant no matter the usage of artifact removal methods. Wile the means of components of eyes and muscle have edged up, with the mean of raw data 0, treated with Filer, ASR, UNet++,  ICUnet and labeled with ICA, but it is still relatively small. Brain and others are the relatively large portion of the components to be classified in this data.  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/bar/bar.png)  
-Fig.2. Mean of quantity of brain Componet by different methods
+Fig.3. Mean of quantity of brain Componet by different methods
 
 The number of the brain components in an EEG data, the more quantities it has, the more accuracy and reliability of the data is. Through the process of Filter, ASR, UNet++ and ICUnet, the numbers of brain components in EEG data have increased(Fig.3 to 12). The means, 8.51, 13.51, 25.13 and 19.15, respectively represent the value of  the brain components contained in data after we remove the noise by the above methods. Compared with the original mean 1.38 from raw data, each of the four methods performed a great rise. Also the components that are classified as others have decreased.   
 
@@ -78,43 +81,38 @@ The mean of the others components detected in raw data is 28.62, and the means d
 
 The value obtained from UNet++ shows a significant difference in contrast with others. Indicated a better efficiency among the four algorithms. In addition, the components of eyes and muscle can be separated after ICA, but it is still relatively small. Brain and others are the relatively large portion of the components to be classified in this data.  
 
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_RAW.png)  
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_RAW.png)  
-Fig.3 & 4. The 2D and 3D plot of raw data from the fifth subject.
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_Filter.png)  
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_Filter.png)  
-Fig.5 & 6. The 2D and 3D plot of data processed by filter from the fifth subject.  
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_ASR.png)
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_ASR.png)  
-Fig.7 & 8. The 2D and 3D plot of data processed by ASR from the fifth subject.  
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_UNet_PP.png)  
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_UNet_PP.png)  
-Fig.9 & 10. The 2D and 3D plot of data processed by UNet++ from the fifth subject. 
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_ICUnet.png)  
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_ICUnet.png)  
-Fig.11 & 12. The 2D and 3D plot of data processed by IC-UNet from the fifth subject.  
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/Comb_graph/Comb_Raw.png)   
+Fig.4. The 2D and 3D plot of raw data from the fifth subject.  
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/Comb_graph/Comb_Filter.png)  
+Fig.5. The 2D and 3D plot of data processed by filter from the fifth subject.  
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/Comb_graph/Comb_ASR.png)  
+Fig.6. The 2D and 3D plot of data processed by ASR from the fifth subject.  
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/Comb_graph/Comb_Unetpp.png)  
+Fig.7. The 2D and 3D plot of data processed by UNet++ from the fifth subject.  
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/Comb_graph/Comb_ICUNet.png)    
+Fig.8. The 2D and 3D plot of data processed by IC-UNet from the fifth subject.  
 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/long_table.jpeg)   
-Fig.13. The result table of differnet way of artifact removal   
+Fig.9. The result table of differnet way of artifact removal   
 
 ### - PSD
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/info.png)  
-Fig.14. Setting of PSD plot  
+Fig.11. Setting of PSD plot  
 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/raw.png)    
-Fig.15. PSD of the raw data of fifth subject  
+Fig.12. PSD of the raw data of fifth subject  
 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/filter.png)    
-Fig.16. PSD of the data after filtered of fifth subject   
+Fig.13. PSD of the data after filtered of fifth subject   
 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/ASR.png)  
-Fig.17. PSD of the data after ASR of fifth subject   
+Fig.14. PSD of the data after ASR of fifth subject   
 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/Unet_pp.png)  
-Fig.18. PSD of the data after UNet++ of fifth subject   
+Fig.15. PSD of the data after UNet++ of fifth subject   
 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/ICUNET.png)  
-Fig.19. PSD of the data after IC-UNet of fifth subject   
+Fig.16. PSD of the data after IC-UNet of fifth subject   
 
 In the raw data, it is evident that low-frequency components exhibit higher log power spectral density, with a significant number of channels showing signals exceeding 50 and reaching a maximum of 60 μV<sup>2</sup>/Hz. 
 

@@ -44,7 +44,7 @@ The "brain component" value in the quantity column serves as a crucial indicator
 
 IV. Usage
 ---
-### Enviromnet and Softwares used:
+### Environment and Softwares used:
 - Matlab 2021a
 - EEGLAB
 - Python 3.8

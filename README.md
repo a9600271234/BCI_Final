@@ -8,6 +8,9 @@ Comparison of Different Methods in EEG Artifact Removal and Reconstruction
 108020013 林昱翔  
 111591519 洪維妮
 
+### Video:
+Link: https://www.youtube.com/watch?v=96Sgieqna6s&ab_channel=Bratis
+
 I. Introduction
 ---
 The raw EEG data collected by the electrodes typically contains a significant amount of noise, including signal interference from adjacent electrodes, high electrode and brain resistance, as well as artifacts from facial expressions, eye movements, and mouth movements. To improve the resolution of the data and facilitate analysis of brain waves, various methods have been developed to remove these artifacts.  

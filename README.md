@@ -17,8 +17,8 @@ There are several available techniques for removing noise and separating signals
 The signal processing algorithms we will be using include two built-in functions from EEGlab in Matlab and two AI models. The specific methods are as follows:
 1. EEG Filter (Math) [1]   
 2. ASR (Math) [2]  
-3. IC-UNet (AI Model) [3]  
-4. UNet++ (AI Model) [4]
+3. UNet++ (AI Model) [3]  
+4. IC-UNet (AI Model) [4]
 
 We will employ these four methods to remove artifacts and then compare and evaluate the results using ICLable and PSD in EEGlab. This analysis will help us determine which methods exhibit better performance.
 
@@ -92,21 +92,35 @@ Fig.7 & 8. The 2D and 3D plot of data processed by ASR from the fifth subject.
 Fig.9 & 10. The 2D and 3D plot of data processed by UNet++ from the fifth subject. 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/2D/5_2D_ICUnet.png)  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/3D/5_3D_ICUnet.png)  
-Fig.11 & 12. The 2D and 3D plot of data processed by ICUnet from the fifth subject.  
+Fig.11 & 12. The 2D and 3D plot of data processed by IC-UNet from the fifth subject.  
 
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/1.png)  
-Fig.13. The result of Raw data  
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/2.png)  
-![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/3.png)  
-Fig.14 & 15. The result of differnet way of artifact removal   
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/long_table.jpeg)   
+Fig.13. The result table of differnet way of artifact removal   
 
 ### - PSD
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/info.png)  
+Fig.14. Setting of PSD plot  
+
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/raw.png)    
+Fig.15. PSD of the raw data of fifth subject  
+
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/filter.png)    
+Fig.16. PSD of the data after filtered of fifth subject   
+
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/ASR.png)  
+Fig.17. PSD of the data after ASR of fifth subject   
+
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/Unet_pp.png)  
+Fig.18. PSD of the data after UNet++ of fifth subject   
+
+![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/PSD/ICUNET.png)  
+Fig.19. PSD of the data after IC-UNet of fifth subject   
 
 In the raw data, it is evident that low-frequency components exhibit higher log power spectral density, with a significant number of channels showing signals exceeding 50 and reaching a maximum of 60 μV<sup>2</sup>/Hz. 
 
 After applying the Filter and Filter+ASR techniques, both methods exhibit similar PSD distributions, albeit with slightly lower overall intensity in the ASR approach. 
 
-Under the UNet++ model, there is a noticeable reduction in overall intensity, resulting in comparable signal strengths among channels in both low-frequency and high-frequency ranges. As for the ICUNet, the overall intensity is relatively higher compared to UNet++, while maintaining comparable signal strengths among individual channels.
+Under the UNet++ model, there is a noticeable reduction in overall intensity, resulting in comparable signal strengths among channels in both low-frequency and high-frequency ranges. As for IC-UNet, the overall intensity is relatively higher compared to UNet++, while maintaining comparable signal strengths among individual channels.
 
 
 VI. References
@@ -115,10 +129,10 @@ VI. References
 
 [2] Patrick Bloniasz. (2022). Artifact Subspace Reconstruction (ASR) for electroencephalography artifact removal must be optimized for each unique dataset. Qeios. doi:10.32388/SMEI50. 
 
-[3] Chuang CH, Chang KY, Huang CS, Jung TP. IC-U-Net: A U-Net-based Denoising Autoencoder Using Mixtures of Independent Components for Automatic EEG Artifact Removal. Neuroimage. 2022 Nov;263:119586. doi: 10.1016/j.neuroimage.2022.119586. Epub 2022 Aug 27. PMID: 36031182.
-
-[4] Zhou, Z., Rahman Siddiquee, M. M., Tajbakhsh, N., & Liang, J
+[3] Zhou, Z., Rahman Siddiquee, M. M., Tajbakhsh, N., & Liang, J
 (2018). Unet++: A nested -net architecture for medical image segmentation. In Deep Learning in Medical Image Analysis and Multimodal Learning for Clinical Decision Support: 4th International Workshop, DLMIA 2018, and 8th International Workshop, ML-CDS 2018, Held in Conjunction with MICCAI 2018, Granada, Spain, September 20, 2018, Proceedings 4 (pp. 3-11). Springer International Publishing.    
+
+[4] Chuang CH, Chang KY, Huang CS, Jung TP. IC-U-Net: A U-Net-based Denoising Autoencoder Using Mixtures of Independent Components for Automatic EEG Artifact Removal. Neuroimage. 2022 Nov;263:119586. doi: 10.1016/j.neuroimage.2022.119586. Epub 2022 Aug 27. PMID: 36031182.
 
 [5] http://gigadb.org/dataset/100295  
 

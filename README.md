@@ -10,32 +10,34 @@ Comparison of Different Methods in EEG Artifact Removal and Reconstruction
 
 I. Introduction
 ---
-The EEG raw data collected by the electrodes normally contained a significant amount of noise such as signal interference from adjacent electrodes, large resistance of electrodes and the brain, facial expressions, eye movements and mouth movements. To get the data with better resolution so that it can make use for analyzing brain waves, plenty of ways were designed for removing artifacts. 
+The raw EEG data collected by the electrodes typically contains a significant amount of noise, including signal interference from adjacent electrodes, high electrode and brain resistance, as well as artifacts from facial expressions, eye movements, and mouth movements. To improve the resolution of the data and facilitate analysis of brain waves, various methods have been developed to remove these artifacts.  
 
-The available methods for removing noise and separating signals from EEG raw data, ranging from traditional mathematical methods such as filtering and ASR to current popular AI models such as CNN. To compare the differences between these methods through the evaluation techniques is our aim in this project.
+There are several available techniques for removing noise and separating signals from raw EEG data, ranging from traditional mathematical methods such as filtering and Artifact Subspace Reconstruction (ASR), to more recent AI models such as Convolutional Neural Networks (CNN). In this project, our objective is to compare and evaluate the differences among these methods using various evaluation techniques.
 
-The existing signal processing algorithms that we use include 2 functions from EEGlab in Matlab and 2 Al models listed as follows:  
+The signal processing algorithms we will be using include two built-in functions from EEGlab in Matlab and two AI models. The specific methods are as follows:
 1. EEG Filter (Math) [1]   
 2. ASR (Math) [2]  
 3. IC-UNet (AI Model) [3]  
 4. UNet++ (AI Model) [4]
 
-We will use these methods applied to the same EEG data (Motor-Imagery) for processing the signal. And compare the differences between the efficacy among the signal processing methods by different evaluation techniques including PSD. Each result will then be compared with the raw data, to distinguish the difference.  
+We will employ these four methods to remove artifacts and then compare and evaluate the results using ICLable and PSD in EEGlab. This analysis will help us determine which methods exhibit better performance.
 
 II. Dataset
 ---
-The data set we use in practice is the EEG datasets for motor imagery brain computer interface from GigaDB [5], which contains EEG recordings of subjects performing grasp-and-lift (GAL) trials. There are 52 subjects in total. Among them, we removed subjects number 2, 12, 13, 17 and  33 from our data analysis. Due to the abnormal signaling detection, which received only brain components and only showed activations in certain regions in the brain through the IClabel.  
 
-So there are only 47 data sets we use for analyzing. To reduce the redundant and same-source signal reception, we choose 30 (Fig.1) out of 64 channel (Four channels  from Electrode patch to detect the movement from muscles be excluded from the original 68 channels). The original sampling rate was 512, downsample to 256.  
+The dataset we used is motor imagery dataset in brain-computer interface from GigaDB [5]. This dataset comprises EEG recordings of subjects performing grasp-and-lift (GAL) trials. Initially, there were a total of 52 subjects included in the dataset. However, we excluded subjects number 2, 12, 13, 17, and 33 from our data analysis due to abnormal signaling detection. These subjects exhibited brain activations in specific regions, as identified through IClabel analysis.  
+
+Consequently, we were left with a total of 47 datasets for analysis. To minimize redundant and overlapping signal reception, we selected 30 out of the original 64 channels (as shown in Fig.1). Four channels from the electrode patch, which were used to detect muscle movements, were excluded from the original 68 channels. The original sampling rate of the data was 512, which we downsampled to 256 to facilitate further analysis.  
 
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/30_channel/ch.png)  
 Fig.1. The channel location of 30  channels.   
 
 III. Model Framework & Validation
 ---
-The goal is to use these different algorithms to reject unwanted signals so we can identify when a hand is conducting specific movements using EEG data. The PSD values resulting from different algorithms will be calculated and compared. Also, through the ICA function in EEGLab, different sources (brain, eye, muscle, heart, Channel Noise, Line Noise, others) are separated from the EEG signals. The differences between the raw data and various processing methods are compared after using IClabel to observe whether the number of brain signals has increased. 
+The objective of this study is to utilize different algorithms to eliminate unwanted signals in order to identify specific hand movements using EEG data. The Power Spectral Density (PSD) values obtained from these algorithms will be calculated and compared. Additionally, the ICA (Independent Component Analysis) function in EEGLab will be employed to separate different sources (brain, eye, muscle, heart, channel noise, line noise, etc.) from the EEG signals. The differences between the raw data and various processing methods will be compared by using IClabel to observe whether the number of brain signals has increased.  
 
-The brain component from the quantity column is an important index of how clean the data is. It indicates on average how many channels out of 30 channels does the signal coming from the brain component. Therefore, the higher this value is, the better the signal is. Again, we are using this method to compare the result of different signals coming from different algorithms.
+The "brain component" value in the quantity column serves as a crucial indicator of data cleanliness. It represents the average number of channels out of the 30 selected channels that contain brain signals. Therefore, a higher value indicates a cleaner signal. This metric will be used to compare the results obtained from different algorithms and signal processing techniques.  
+
 
 IV. Usage
 ---
@@ -65,6 +67,7 @@ IV. Usage
 
 V. Results
 ---
+### - ICLable
 The components detected in motor imagery EEG datasets can be divided into brain, eye muscle, heart, channel noise, line noise and others. The means of  heart, channel noise and line noise didn’t show statistically significant no matter the usage of artifact removal methods. Wile the means of components of eyes and muscle have edged up, with the mean of raw data 0, treated with Filer, ASR, UNet++,  ICUnet and labeled with ICA, but it is still relatively small. Brain and others are the relatively large portion of the components to be classified in this data.  
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/bar/bar.png)  
 Fig.2. Mean of quantity of brain Componet by different methods
@@ -97,6 +100,15 @@ Fig.13. The result of Raw data
 ![image](https://github.com/a9600271234/BCI_Final/blob/main/Image/data/3.png)  
 Fig.14 & 15. The result of differnet way of artifact removal   
 
+### - PSD
+
+In the raw data, it is evident that low-frequency components exhibit higher log power spectral density, with a significant number of channels showing signals exceeding 50 and reaching a maximum of 60 μV<sup>2</sup>/Hz. 
+
+After applying the Filter and Filter+ASR techniques, both methods exhibit similar PSD distributions, albeit with slightly lower overall intensity in the ASR approach. 
+
+Under the UNet++ model, there is a noticeable reduction in overall intensity, resulting in comparable signal strengths among channels in both low-frequency and high-frequency ranges. As for the ICUNet, the overall intensity is relatively higher compared to UNet++, while maintaining comparable signal strengths among individual channels.
+
+
 VI. References
 ---
 [1] Gonçales, L., Farias, K., Kupssinskü, L., & Segalotto, M. (2021). The effects of applying filters on EEG signals for classifying developers’ code comprehension. Journal of Applied Research and Technology, 19(6), 584-602.
@@ -111,3 +123,5 @@ VI. References
 [5] http://gigadb.org/dataset/100295  
 
 [6] Luciw, M., Jarocka, E. & Edin, B. Multi-channel EEG recordings during 3,936 grasp and lift trials with varying weight and friction. Sci Data 1, 140047 (2014).    
+
+

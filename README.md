@@ -14,13 +14,13 @@ The raw EEG data collected by the electrodes typically contains a significant am
 
 There are several available techniques for removing noise and separating signals from raw EEG data, ranging from traditional mathematical methods such as filtering and Artifact Subspace Reconstruction (ASR), to more recent AI models such as Convolutional Neural Networks (CNN). In this project, our objective is to compare and evaluate the differences among these methods using various evaluation techniques.
 
-The signal processing algorithms we will be using include two built-in functions from EEGlab in Matlab and two AI models. The specific methods are as follows:
+The signal processing algorithms we will be using include two built-in functions from EEGLAB in Matlab and two AI models. The specific methods are as follows:
 1. EEG Filter (Math) [1]   
 2. ASR (Math) [2]  
 3. UNet++ (AI Model) [3]  
 4. IC-UNet (AI Model) [4]
 
-We will employ these four methods to remove artifacts and then compare and evaluate the results using ICLable and PSD in EEGlab. This analysis will help us determine which methods exhibit better performance.
+We will employ these four methods to remove artifacts and then compare and evaluate the results using ICLable and PSD in EEGLAB. This analysis will help us determine which methods exhibit better performance.
 
 II. Dataset
 ---
@@ -34,7 +34,7 @@ Fig.1. The channel location of 30  channels.
 
 III. Model Framework & Validation
 ---
-The objective of this study is to utilize different algorithms to eliminate unwanted signals in order to identify specific hand movements using EEG data. The Power Spectral Density (PSD) values obtained from these algorithms will be calculated and compared. Additionally, the ICA (Independent Component Analysis) function in EEGLab will be employed to separate different sources (brain, eye, muscle, heart, channel noise, line noise, etc.) from the EEG signals. The differences between the raw data and various processing methods will be compared by using IClabel to observe whether the number of brain signals has increased.  
+The objective of this study is to utilize different algorithms to eliminate unwanted signals in order to identify specific hand movements using EEG data. The Power Spectral Density (PSD) values obtained from these algorithms will be calculated and compared. Additionally, the ICA (Independent Component Analysis) function in EEGLAB will be employed to separate different sources (brain, eye, muscle, heart, channel noise, line noise, etc.) from the EEG signals. The differences between the raw data and various processing methods will be compared by using IClabel to observe whether the number of brain signals has increased.  
 
 The "brain component" value in the quantity column serves as a crucial indicator of data cleanliness. It represents the average number of channels out of the 30 selected channels that contain brain signals. Therefore, a higher value indicates a cleaner signal. This metric will be used to compare the results obtained from different algorithms and signal processing techniques.  
 
@@ -43,7 +43,7 @@ IV. Usage
 ---
 ### Enviromnet and Softwares used:
 - Matlab 2021a
-- EEGlab 
+- EEGLAB
 - Python 3.8
 - PyTorch 1.7.1
 
